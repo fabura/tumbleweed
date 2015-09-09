@@ -89,276 +89,393 @@ textarea {
    ========================================================================== */
 
 html, body {
-  margin: 0;
+    margin: 0;
 }
 
 body, h1, h2, h3, input, button {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
 }
 
 h2 {
-  font-weight: 300;
-  margin-top: 0;
+    font-weight: 300;
+    margin-top: 0;
 }
 
 section {
-  width: 100%;
-  height: 90vh;
-  position: relative;
-  color: #fff;
-  min-height: 600px;
-  overflow: hidden;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    color: #fff;
+    min-height: 600px;
+    overflow: hidden;
 }
 
 .logo {
-  width: 200px;
-  height: 95px;
-  background: url(../img/logo-white.svg) center no-repeat;
-  background-size: 220px;
-  display: inline-block;
-  margin-bottom: -80px;
+    width: 240px;
+    height: 95px;
+    background: url(../img/logo-white.svg) center no-repeat;
+    background-size: 220px;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 .section-container {
-  width: 960px;
-  margin: 0 auto;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h2 {
-  font-size: 60px;
+    font-size: 60px;
 }
 
 #share {
-  background: #00ce97 url(../img/mainphoto.jpg) center no-repeat;
-  background-size: cover;
-  height: 100vh;
+    background: #00ce97 url(../img/mainphoto.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 .subtitle {
-  margin-top: -40px;
-  font-size: 20px;
-  font-weight: 300;
+    margin-top: -40px;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .email-form {
-  margin-top: 60px;
-  font-size: 20px;
+    margin-top: 60px;
+    font-size: 20px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-5px);
+    }
+
+    20% {
+        transform: translateX(5px);
+    }
+
+    30% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    60% {
+        transform: translateX(10px);
+    }
+
+    70% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+
+@keyframes highlight {
+    0% {
+        background: #fff;
+    }
+
+    50% {
+        background: #ffe2ea;
+    }
+
+    100% {
+        background: #fff;
+    }
+}
+
+.email-form.invalid {
+    animation: shake 1s ease;
+}
+
+.email-form.invalid input {
+    animation: highlight 1s ease;
 }
 
 .email-form div {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .email-form input, .email-form button {
-  font-size: 20px;
-  border: 0;
-  border-radius: 2px;
-  line-height: 30px;
-  padding: 5px 10px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 2px;
+    line-height: 30px;
+    padding: 5px 10px;
 }
 
 .email-form input {
-  background: #fff;
+    background: #fff;
+    outline: 0;
 }
 
 .email-form button {
-  background: #ee0068;
-  color: #fff;
-  font-size: 16px;
-  padding: 5px 20px;
-  text-transform: uppercase;
+    background: #ee0068;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    outline: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.email-form button:hover {
+    background: #f9006b;
 }
 
 .wing-left, .wing-right {
-  background: #00ce97;
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  bottom: -100px;
-  transform: rotate(10deg);
+    background: #00ce97;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    transform: rotate(10deg);
 }
 
 .wing-left {
-  left: -30%;
-  transform: rotate(7deg);
+    left: -30%;
+    transform: rotate(7deg);
 }
 
 .wing-right {
-  right: -30%;
-  transform: rotate(-7deg);
+    right: -30%;
+    transform: rotate(-7deg);
 }
 
 #why {
-  background: #00ce97;
+    background: #00ce97;
+    min-height: 790px;
 }
 
 #why h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .request {
-  display: inline-block;
-  padding: 20px 0 20px 160px;
-  text-align: left;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 140px 140px
+    display: inline-block;
+    padding: 20px 0 20px 160px;
+    text-align: left;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 135px 135px;
+    margin-bottom: 40px;
 }
 
 .request-container.left {
-  text-align: left;
+    text-align: left;
 }
 
 .request-container.right {
-  text-align: right;
+    text-align: right;
 }
 
 .request h3 {
-  font-weight: 300;
-  font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .request .input, .request button {
-  font-size: 18px;
-  border: solid 2px #fff;
-  border-radius: 2px;
-  display: inline-block;
-  line-height: 30px;
-  padding: 5px 10px;
+    font-size: 18px;
+    border: solid 2px #fff;
+    border-radius: 2px;
+    display: inline-block;
+    line-height: 30px;
+    padding: 5px 10px;
+    vertical-align: top;
 }
 
 .request button {
-  border-color: #ee0068;
-  color: #ee0068;
-  background: transparent;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 400;
+    border-color: #ee0068;
+    color: #ee0068;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.request button:hover {
+    background: #ee0068;
+    color: #fff;
 }
 
 .request.want-to-learn {
-  background-image: url(../img/wine@2x.png);
+    background-image: url(../img/wine@2x.png);
 }
 
 .request.need-a-consult {
-  background-image: url(../img/archeology@2x.png);
+    background-image: url(../img/archeology@2x.png);
 }
 
 .request.want-to-share {
-  background-image: url(../img/pen@2x.png);
+    background-image: url(../img/pen@2x.png);
 }
-
 
 #awesome {
-  background: #00b29b;
+    background: #00b29b;
 }
 
-
 .slider {
-  position: relative;
+    position: relative;
 }
 
 .arrow-left, .arrow-right {
-  border: 0;
-  background: 0;
-  outline: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 100px;
-  background-size: 40px 70px;
-  background-repeat: no-repeat;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+    border: 0;
+    background: 0;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background-size: 40px 70px;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 .arrow-left:hover, .arrow-right:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.arrow-left:active, .arrow-right:active {
-  background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
 }
 
 .arrow-left {
-  left: -150px;
-  background-image: url(../img/arrow_left@2x.png);
-  background-position: 23px 15px;
+    left: -100px;
+    background-image: url(../img/arrow_left@2x.png);
+    background-position: 23px 15px;
 }
 
 .arrow-right {
-  right: -150px;
-  background-image: url(../img/arrow_right@2x.png);
-  background-position: 37px 15px;
+    right: -100px;
+    background-image: url(../img/arrow_right@2x.png);
+    background-position: 37px 15px;
 }
 
 .slider {
-  width: 600px;
-  display: inline-block;
+    width: 600px;
+    display: inline-block;
 }
 
 .slider .slides {
-  height: 300px;
-  width: 600px;
-  overflow: hidden;
-  white-space: nowrap;
+    height: 300px;
+    width: 600px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .slider .slide {
-  height: 300px;
-  display: inline-block;
-  width: 100%;
-  white-space: initial;
-  transition: margin 0.4s ease;
-  position: relative;
+    height: 300px;
+    display: inline-block;
+    width: 100%;
+    white-space: initial;
+    transition: margin 0.4s ease;
+    position: relative;
 }
 
 .slide-title {
-  position: absolute;
-  top: -20px;
-  text-align: center;
-  width: 100%;
-  font-size: 20px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
 }
 
 .slider .indexes {
-  position: relative;
-  top: -40px;
+    position: relative;
+    top: -30px;
 }
 
 .slider .index {
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  border: solid 2px #fff;
-  border-radius: 24px;
-  margin: 0 5px;
-  display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border: solid 2px #fff;
+    border-radius: 24px;
+    margin: 0 5px;
+    display: inline-block;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slider .index:hover {
+    opacity: 1;
+}
+
+.slider .index.active {
+    border: solid 2px #ee0068;
+    color: #ee0068;
 }
 
 .slide-content {
-  height: 250px;
-  width: 100%;
-  background: url(../img/choose@2x.png) center no-repeat;
-  background-size: contain;
-  margin-top: 20px;
+    height: 230px;
+    margin-top: 40px;
+    width: 100%;
+    background: url(../img/choose@2x.png) center no-repeat;
+    background-size: contain;
 }
 
 #footer {
-  background-color: #ee0068;
-  background-image: url(../img/pattern.png);
+    background-color: #ee0068;
+    background-image: url(../img/pattern.png);
+    height: auto;
+    min-height: 400px;
 }
+
+#footer h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+#footer .email-form {
+    width: 320px;
+    display: inline-block;
+}
+
+#footer .email-form input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#footer .email-form button {
+    width: 100%;
+    background: #00b29b;
+}
+
+#footer .email-form button:hover {
+    background: #00d1b5;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -443,8 +560,108 @@ h2 {
     /* Style adjustments for viewports that meet the condition */
 }
 
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+    /* Style adjustments for viewports that meet the condition */
+
+    .section-container {
+        max-width: 300px;
+    }
+
+    .logo {
+        width: 180px;
+        height: 65px;
+        background-size: 160px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .email-form {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .email-form input, .email-form button {
+        font-size: 15px;
+    }
+
+    #why {
+        height: auto;
+    }
+
+    #why .section-container {
+        position: relative;
+        width: 320px;
+        margin: 0 auto;
+        left: auto;
+        top: auto;
+        transform: none;
+    }
+
+    .request {
+        font-size: 16px;
+        padding-left: 0;
+        background-size: 60px;
+        background-position: top center;
+        padding-top: 65px;
+        margin-bottom: 40px;
+    }
+
+    .request h3 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .request .input {
+        font-size: 14px;
+        padding: 3px 5px;
+        width: 231px;
+        display: inline-block;
+    }
+
+    .request button {
+        padding: 3px 5px;
+    }
+
+    .slider {
+        width: 320px;
+        display: inline-block;
+    }
+
+    .slider .slides {
+        height: 300px;
+        width: 300px;
+    }
+
+    .slider .slide {
+        height: 300px;
+        width: 100%;
+    }
+
+    .slider .indexes {
+        top: -15px;
+    }
+
+    #awesome h2 {
+        font-size: 30px;
+    }
+
+
+    #footer .email-form {
+        width: 300px;
+    }
+}
+
+
 @media print,
-       (min-resolution: 120dpi) {
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -459,8 +676,9 @@ h2 {
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important;
+        /* Black prints faster:
+                                          http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -482,7 +700,6 @@ h2 {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -498,7 +715,6 @@ h2 {
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
