@@ -1,0 +1,526 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body {
+  margin: 0;
+}
+
+body, h1, h2, h3, input, button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  color: #fff;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 200px;
+  height: 95px;
+  background: url(../img/logo-white.svg) center no-repeat;
+  background-size: 220px;
+  display: inline-block;
+  margin-bottom: -80px;
+}
+
+.section-container {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-size: 60px;
+}
+
+#share {
+  background: #00ce97 url(../img/mainphoto.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.subtitle {
+  margin-top: -40px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.email-form {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+.email-form div {
+  margin-bottom: 10px;
+}
+
+.email-form input, .email-form button {
+  font-size: 20px;
+  border: 0;
+  border-radius: 2px;
+  line-height: 30px;
+  padding: 5px 10px;
+}
+
+.email-form input {
+  background: #fff;
+}
+
+.email-form button {
+  background: #ee0068;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+
+.wing-left, .wing-right {
+  background: #00ce97;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: -100px;
+  transform: rotate(10deg);
+}
+
+.wing-left {
+  left: -30%;
+  transform: rotate(7deg);
+}
+
+.wing-right {
+  right: -30%;
+  transform: rotate(-7deg);
+}
+
+#why {
+  background: #00ce97;
+}
+
+#why h2 {
+  margin-top: 0;
+}
+
+.request {
+  display: inline-block;
+  padding: 20px 0 20px 160px;
+  text-align: left;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 140px 140px
+}
+
+.request-container.left {
+  text-align: left;
+}
+
+.request-container.right {
+  text-align: right;
+}
+
+.request h3 {
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.request .input, .request button {
+  font-size: 18px;
+  border: solid 2px #fff;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 30px;
+  padding: 5px 10px;
+}
+
+.request button {
+  border-color: #ee0068;
+  color: #ee0068;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.request.want-to-learn {
+  background-image: url(../img/wine@2x.png);
+}
+
+.request.need-a-consult {
+  background-image: url(../img/archeology@2x.png);
+}
+
+.request.want-to-share {
+  background-image: url(../img/pen@2x.png);
+}
+
+
+#awesome {
+  background: #00b29b;
+}
+
+
+.slider {
+  position: relative;
+}
+
+.arrow-left, .arrow-right {
+  border: 0;
+  background: 0;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-size: 40px 70px;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.arrow-left:active, .arrow-right:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.arrow-left {
+  left: -150px;
+  background-image: url(../img/arrow_left@2x.png);
+  background-position: 23px 15px;
+}
+
+.arrow-right {
+  right: -150px;
+  background-image: url(../img/arrow_right@2x.png);
+  background-position: 37px 15px;
+}
+
+.slider {
+  width: 600px;
+  display: inline-block;
+}
+
+.slider .slides {
+  height: 300px;
+  width: 600px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider .slide {
+  height: 300px;
+  display: inline-block;
+  width: 100%;
+  white-space: initial;
+  transition: margin 0.4s ease;
+  position: relative;
+}
+
+.slide-title {
+  position: absolute;
+  top: -20px;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.slider .indexes {
+  position: relative;
+  top: -40px;
+}
+
+.slider .index {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border: solid 2px #fff;
+  border-radius: 24px;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.slide-content {
+  height: 250px;
+  width: 100%;
+  background: url(../img/choose@2x.png) center no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+}
+
+#footer {
+  background-color: #ee0068;
+  background-image: url(../img/pattern.png);
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
