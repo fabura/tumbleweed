@@ -67,4 +67,8 @@
             event.preventDefault();
         }
     });
+
+    $('.request button, .request .input').click(function () {
+        $(this).closest('.request').addClass('show-response');
+    });
 })();

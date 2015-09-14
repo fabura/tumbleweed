@@ -308,6 +308,11 @@ h2 {
     line-height: 30px;
     padding: 5px 10px;
     vertical-align: top;
+    cursor: pointer;
+}
+
+.request .input {
+    width: 310px;
 }
 
 .request button {
@@ -337,6 +342,53 @@ h2 {
 
 .request.want-to-share {
     background-image: url(../img/pen@2x.png);
+}
+
+.response {
+    width: 334px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(255,255,255, 0.2);
+    margin-top: 10px;
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+    font-size: 18px;
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        margin-top: 0;
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        max-height: 200px;
+        margin-top: 10px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes addMargin {
+    from {
+        margin-bottom: 40px;
+    }
+
+    to {
+        margin-bottom: 100px;
+    }
+}
+
+.request.show-response .response {
+    display: block;
+    animation: slideDown 0.5s ease;
+}
+
+.request.show-response {
+    animation: addMargin 0.5s ease forwards;
 }
 
 #awesome {
@@ -440,8 +492,21 @@ h2 {
     height: 230px;
     margin-top: 40px;
     width: 100%;
-    background: url(../img/choose@2x.png) center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
+}
+
+.slide_search .slide-content {
+    background-image: url(../img/search@2x.png);
+}
+
+.slide_cards .slide-content {
+    background-image: url(../img/choose@2x.png);
+}
+
+.slide_answer .slide-content {
+    background-image: url(../img/book@2x.png);
 }
 
 #footer {
