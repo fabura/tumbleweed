@@ -204,8 +204,42 @@ h2 {
     }
 }
 
+@keyframes sending {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.98);
+    }
+
+    0% {
+        transform: scale(1);
+    }
+}
+
+@keyframes sent {
+    from {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
 .email-form.invalid {
     animation: shake 1s ease;
+}
+
+.email-form.sending {
+    animation: sending 0.8s ease-in-out infinite;
+}
+
+.email-form.sent {
+    animation: sent 0.1s ease forwards;
 }
 
 .email-form.invalid input {
@@ -244,6 +278,33 @@ h2 {
 
 .email-form button:hover {
     background: #f9006b;
+}
+
+.email-form-response {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%, -60px);
+    text-align: center;
+    font-size: 26px;
+    display: none;
+}
+
+@keyframes showResponse {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60px) scale(0.4);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -60px) scale(1);
+    }
+}
+
+.email-form-response.show {
+    display: block;
+    animation: showResponse 0.2s ease;
 }
 
 .wing-left, .wing-right {
@@ -507,6 +568,10 @@ h2 {
 
 .slide_answer .slide-content {
     background-image: url(../img/book@2x.png);
+}
+
+.slide_selfie .slide-content {
+    background-image: url(../img/master@2x.jpg);
 }
 
 #footer {
