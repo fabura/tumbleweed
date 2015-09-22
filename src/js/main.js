@@ -15,8 +15,12 @@
         };
 
         var boundIndex = function () {
-            if (index === $slides.length) { index = 0; }
-            if (index === -1) { index = $slides.length - 1; }
+            if (index === $slides.length) {
+                index = 0;
+            }
+            if (index === -1) {
+                index = $slides.length - 1;
+            }
         };
 
         var next = function () {
@@ -47,26 +51,30 @@
         });
     })();
 
+    var submitted = false;
     $('.email-form').on('submit', function (event) {
-        var $form = $(this);
-        var $email = $form.find('input');
-        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-
+        if (submitted) {
+            return;
+        }
         event.preventDefault();
+        var $form = $(this).find('form');
+        var $email = $form.find("input[type='email']");
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2,6})?)$/i;
 
         if (re.test($email.val())) {
             $form.addClass('sending');
+            submitted = true;
+            $form.submit();
 
-            $.post($form.attr('action'), {email: $email.val()})
-                .success(function () {
-                    setTimeout(function () {
-                        $('.email-form').addClass('sent');
-                        $('.email-form-response').addClass('show');
-                    }, 1000);
-                })
-                .error(function () {
 
-                });
+            setTimeout(function () {
+                $('.email-form').addClass('sent');
+                $('.email-form-response').addClass('show');
+                setTimeout(function () {
+                    $('.email-form').display = 'none';
+                }, 1000);
+            }, 1000);
+
         } else {
             $form.addClass('invalid');
 
