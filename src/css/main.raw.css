@@ -22,11 +22,6 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -132,8 +127,7 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 h2 {
@@ -157,112 +151,41 @@ h2 {
     font-size: 20px;
 }
 
-@-webkit-keyframes shake {
-    0% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
-    }
-
-    10% {
-        -webkit-transform: translateX(-5px);
-                transform: translateX(-5px);
-    }
-
-    20% {
-        -webkit-transform: translateX(5px);
-                transform: translateX(5px);
-    }
-
-    30% {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px);
-    }
-
-    40% {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
-    }
-
-    50% {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px);
-    }
-
-    60% {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
-    }
-
-    70% {
-        -webkit-transform: translateX(-5px);
-                transform: translateX(-5px);
-    }
-
-    80% {
-        -webkit-transform: translateX(5px);
-                transform: translateX(5px);
-    }
-}
-
 @keyframes shake {
     0% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 
     10% {
-        -webkit-transform: translateX(-5px);
-                transform: translateX(-5px);
+        transform: translateX(-5px);
     }
 
     20% {
-        -webkit-transform: translateX(5px);
-                transform: translateX(5px);
+        transform: translateX(5px);
     }
 
     30% {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px);
+        transform: translateX(-10px);
     }
 
     40% {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
+        transform: translateX(10px);
     }
 
     50% {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px);
+        transform: translateX(-10px);
     }
 
     60% {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
+        transform: translateX(10px);
     }
 
     70% {
-        -webkit-transform: translateX(-5px);
-                transform: translateX(-5px);
+        transform: translateX(-5px);
     }
 
     80% {
-        -webkit-transform: translateX(5px);
-                transform: translateX(5px);
-    }
-}
-
-
-@-webkit-keyframes highlight {
-    0% {
-        background: #fff;
-    }
-
-    50% {
-        background: #ffe2ea;
-    }
-
-    100% {
-        background: #fff;
+        transform: translateX(5px);
     }
 }
 
@@ -281,86 +204,46 @@ h2 {
     }
 }
 
-@-webkit-keyframes sending {
-    0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-    }
-
-    50% {
-        -webkit-transform: scale(0.98);
-                transform: scale(0.98);
-    }
-
-    0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-    }
-}
-
 @keyframes sending {
     0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
+        transform: scale(1);
     }
 
     50% {
-        -webkit-transform: scale(0.98);
-                transform: scale(0.98);
+        transform: scale(0.98);
     }
 
     0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-    }
-}
-
-@-webkit-keyframes sent {
-    from {
-        -webkit-transform: scale(0.8);
-                transform: scale(0.8);
-        opacity: 1;
-    }
-
-    to {
-        -webkit-transform: scale(2);
-                transform: scale(2);
-        opacity: 0;
+        transform: scale(1);
     }
 }
 
 @keyframes sent {
     from {
-        -webkit-transform: scale(0.8);
-                transform: scale(0.8);
+        transform: scale(0.8);
         opacity: 1;
     }
 
     to {
-        -webkit-transform: scale(2);
-                transform: scale(2);
+        transform: scale(2);
         opacity: 0;
     }
 }
 
 .email-form.invalid {
-    -webkit-animation: shake 1s ease;
-            animation: shake 1s ease;
+    animation: shake 1s ease;
 }
 
 .email-form.sending {
-    -webkit-animation: sending 0.8s ease-in-out infinite;
-            animation: sending 0.8s ease-in-out infinite;
+    animation: sending 0.8s ease-in-out infinite;
 }
 
 .email-form.sent {
-    -webkit-animation: sent 0.1s ease forwards;
-            animation: sent 0.1s ease forwards;
+    animation: sent 0.1s ease forwards;
 }
 
 .email-form.invalid input {
-    -webkit-animation: highlight 1s ease;
-            animation: highlight 1s ease;
+    animation: highlight 1s ease;
 }
 
 .email-form div {
@@ -402,45 +285,27 @@ h2 {
     position: absolute;
     width: 200px;
     left: 50%;
-    -webkit-transform: translate(-50%, -60px);
-            transform: translate(-50%, -60px);
+    transform: translate(-50%, -60px);
     text-align: center;
     font-size: 26px;
     display: none;
 }
 
-@-webkit-keyframes showResponse {
-    from {
-        opacity: 0;
-        -webkit-transform: translate(-50%, -60px) scale(0.4);
-                transform: translate(-50%, -60px) scale(0.4);
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: translate(-50%, -60px) scale(1);
-                transform: translate(-50%, -60px) scale(1);
-    }
-}
-
 @keyframes showResponse {
     from {
         opacity: 0;
-        -webkit-transform: translate(-50%, -60px) scale(0.4);
-                transform: translate(-50%, -60px) scale(0.4);
+        transform: translate(-50%, -60px) scale(0.4);
     }
 
     to {
         opacity: 1;
-        -webkit-transform: translate(-50%, -60px) scale(1);
-                transform: translate(-50%, -60px) scale(1);
+        transform: translate(-50%, -60px) scale(1);
     }
 }
 
 .email-form-response.show {
     display: block;
-    -webkit-animation: showResponse 0.2s ease;
-            animation: showResponse 0.2s ease;
+    animation: showResponse 0.2s ease;
 }
 
 .wing-left, .wing-right {
@@ -449,20 +314,17 @@ h2 {
     height: 200px;
     position: absolute;
     bottom: -100px;
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    transform: rotate(10deg);
 }
 
 .wing-left {
     left: -30%;
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
+    transform: rotate(7deg);
 }
 
 .wing-right {
     right: -30%;
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
+    transform: rotate(-7deg);
 }
 
 #why {
@@ -556,49 +418,19 @@ h2 {
     font-size: 18px;
 }
 
-@-webkit-keyframes slideDown {
-    from {
-        max-height: 0;
-        margin-top: 0;
-        -webkit-transform: translateY(-50px);
-                transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        max-height: 200px;
-        margin-top: 10px;
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 @keyframes slideDown {
     from {
         max-height: 0;
         margin-top: 0;
-        -webkit-transform: translateY(-50px);
-                transform: translateY(-50px);
+        transform: translateY(-50px);
         opacity: 0;
     }
 
     to {
         max-height: 200px;
         margin-top: 10px;
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@-webkit-keyframes addMargin {
-    from {
-        margin-bottom: 40px;
-    }
-
-    to {
-        margin-bottom: 125px;
     }
 }
 
@@ -614,13 +446,11 @@ h2 {
 
 .request.show-response .response {
     display: block;
-    -webkit-animation: slideDown 0.5s ease;
-            animation: slideDown 0.5s ease;
+    animation: slideDown 0.5s ease;
 }
 
 .request.show-response {
-    -webkit-animation: addMargin 0.5s ease forwards;
-            animation: addMargin 0.5s ease forwards;
+    animation: addMargin 0.5s ease forwards;
 }
 
 #awesome {
@@ -637,8 +467,7 @@ h2 {
     outline: none;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 100px;
     height: 100px;
     background-size: 40px 70px;
@@ -903,8 +732,7 @@ h2 {
         margin: 0 auto;
         left: auto;
         top: auto;
-        -webkit-transform: none;
-                transform: none;
+        transform: none;
     }
 
     .request {
@@ -972,7 +800,6 @@ h2 {
 
 
 @media print,
-(-webkit-min-device-pixel-ratio: 1.25),
 (min-resolution: 120dpi) {
     /* RETINA */
     #footer {
