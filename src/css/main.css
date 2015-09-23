@@ -328,7 +328,7 @@ h2 {
 
 #why {
     background: #00ce97;
-    min-height: 790px;
+    min-height: 870px;
 }
 
 #why h2 {
@@ -786,6 +786,10 @@ h2 {
 
     #footer .email-form {
         width: 300px;
+    }
+
+    .slide_selfie .slide-content {
+        background-size: 170px;
     }
 }
 
