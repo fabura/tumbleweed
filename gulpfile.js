@@ -166,3 +166,14 @@ gulp.task('build', function (done) {
 });
 
 gulp.task('default', ['build']);
+
+
+
+gulp.task('autoprefixer', function () {
+    var postcss      = require('gulp-postcss');
+    var autoprefixer = require('autoprefixer');
+
+    return gulp.src('./src/css/*.css')
+        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(gulp.dest('./dest'));
+});
